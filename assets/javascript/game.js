@@ -1,14 +1,14 @@
 
 
 //array of possible artists
-var artists = ["Tupac", "Outkast", "Redman", "Eminem", "Wu Tang"];
+var artists = ["tupac", "outkast", "redman", "eminem", "wu-tang", "snoop", "krs-one", "run-dmc"];
 
 //choosing an artist at random from the array
 var currentArtist = artists[Math.floor(Math.random() * artists.length)];
 
 //global variables
 var wins = 0;
-var remainingGuesses = 12;
+var remain = 12;
 var s; 
 
 //empty array to store guesses
@@ -17,6 +17,8 @@ var answerArray = [];
 
 //filling answer array with underscores when game first starts
 function startUp () {
+
+    document.getElementById("guessremaining").innerHTML = remain;
 
     for (var i = 0; i < currentArtist.length; i++) {
 
@@ -41,6 +43,9 @@ function startUp () {
             }
 
         }
+
+        document.getElementById("currentword").innerHTML = answerArray.join (" ");
+        remain = remain - 1;
 
     }
     
