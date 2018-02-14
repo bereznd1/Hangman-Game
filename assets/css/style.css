@@ -1,0 +1,32 @@
+#title {
+    text-align: center;
+}
+
+#instructions {
+    text-align: center;
+}
+
+main {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.left-side {
+    border-style: dotted;
+    border-width: 3px;
+    height: 500px;
+    width: 300px;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right-side {
+    border-style: dotted;
+    border-width: 3px;
+    height: 500px;
+    width: 300px;
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+}

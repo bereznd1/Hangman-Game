@@ -10,7 +10,35 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <script src="assets/javascript/game.js"></script>
 </head>
-<body>
+<body onload="startUp()">
+
+<header>
+    <h1 id="title">Hip-Hop Hangman</h1>
+</header>
+
+<main>
+    <div class="left-side">
+
+        <div id="artist-image"></div>
+
+    </div>
+
+    <div class="right-side">
+
+        <h3 id="instructions">Press any key to get started!</h2>
+
+        <div id="wins"><strong>Wins:</strong><br></div>
+
+        <div><strong>Current Word</strong><br></div>
+
+        <div id="currentword"><br></div>
+
+        <div id="guessremaining"><strong>Number of Guesses Remaining:</strong><br></div>
+
+        <div id="alreadyguessed"><strong>Letters Already Guessed:</strong><br></div>
+
+    </div>
+</main>
     
 </body>
 </html>
