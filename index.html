@@ -9,16 +9,28 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="assets/javascript/game.js"></script>
 </head>
 
 <body onload="startUp()">
+
+    <audio id="myAudio">
+        <source src="assets/sounds/pun.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
 
     <header>
         <h1 id="title">Hip-Hop Hangman</h1>
     </header>
 
     <main>
+
+        <p id="winnertitle"></p>
+
+
         <div class="left-side">
 
             <div id="artist-image"></div>
@@ -82,9 +94,6 @@
 
                 <br>
 
-
-                <div id="lost">
-                </div>
 
         </div>
     </main>

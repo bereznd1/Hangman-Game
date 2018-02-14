@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Abuse";
+    src: url("../fonts/Abuse.ttf");
+    }
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#winnertitle {
+    font-family: "Abuse";
+}
+
 #title {
     text-align: center;
 }
@@ -9,6 +22,17 @@
 main {
     width: 650px;
     margin: 0 auto;
+}
+
+#winnertitle {
+    text-align: center;
+    font-size: 26px;
+}
+
+.artistpic {
+    border-style: solid;
+    border-width: 6px;
+    border-radius: 10px;
 }
 
 .left-side {
