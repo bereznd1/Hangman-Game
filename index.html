@@ -5,41 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hangman Game</title>
+    <title>Hip-Hop Hangman</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="assets/javascript/game.js"></script>
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body onload="startUp()">
 
-    <audio id="myAudio">
-        <source src="assets/sounds/pun.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+    <audio id="tupac">
+        <source src="assets/sounds/ambitionz.mp3" type="audio/mpeg"> Your browser does not support the audio element.
     </audio>
 
 
-
-    <header>
-        <h1 id="title">Hip-Hop Hangman</h1>
-    </header>
-
-    <main>
-
-        <p id="winnertitle"></p>
+    <audio id="outkast">
+        <source src="assets/sounds/sofreshsoclean.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
 
 
-        <div class="left-side">
+    <audio id="redman">
+        <source src="assets/sounds/pickitup.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
 
-            <div id="artist-image"></div>
 
-        </div>
+    <audio id="eminem">
+        <source src="assets/sounds/myfault.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
 
-        <div class="right-side">
 
-            <h3 id="instructions">Press any key to get started!</h2>
+    <audio id="wu">
+        <source src="assets/sounds/cream.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+
+
+    <audio id="krs">
+        <source src="assets/sounds/soundofdapolice.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+
+
+    <div id="allcontent">
+
+        <header>
+            <br>
+            <img src="assets/images/hangman.png">
+        </header>
+
+        <main>
+
+            <p id="preptext">You guessed:</p>
+            <p id="winnertitle">No one yet...let's go, yo!</p>
+
+
+            <div class="left-side">
+
+                <div id="artist-image"></div>
+
+            </div>
+
+            <div class="right-side">
+
+                <h3 id="instructions">Press any letter to get started!</h3>
+
+                <br>
 
 
                 <div>
@@ -47,7 +79,7 @@
                 </div>
 
                 <br>
-                
+
                 <div id="wins">
                 </div>
 
@@ -95,8 +127,12 @@
                 <br>
 
 
-        </div>
-    </main>
+            </div>
+            
+        </main>
+
+
+    </div>
 
 </body>
 

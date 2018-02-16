@@ -4,11 +4,28 @@
     }
 
 body {
+    background-image: url('../images/collage.jpg');
     font-family: 'Roboto', sans-serif;
 }
 
+#preptext {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #ffffff;
+    text-shadow: 2px 2px 9px #000000;
+}
+
 #winnertitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-family: "Abuse";
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #ffffff;
+    text-shadow: 2px 2px 9px #000000;
 }
 
 #title {
@@ -16,17 +33,24 @@ body {
 }
 
 #instructions {
+    font-size: 17px;
     text-align: center;
 }
 
-main {
+#allcontent {
+    background-image: url('../images/bg.jpg');
+    border-style: solid;
+    border-width: 10px;
+    border-color: #ffffff;
+    border-radius: 20px;
     width: 650px;
+    height:97vh;
+    padding: 0px 60px;
     margin: 0 auto;
-}
-
-#winnertitle {
-    text-align: center;
-    font-size: 26px;
+    
+    -webkit-box-shadow: 6px 5px 42px 21px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 5px 42px 21px rgba(0,0,0,0.75);
+    box-shadow: 6px 5px 42px 21px rgba(0,0,0,0.75);
 }
 
 .artistpic {
@@ -36,21 +60,31 @@ main {
 }
 
 .left-side {
-    border-style: dotted;
-    border-width: 3px;
-    height: 500px;
+    background-image: url('../images/paper.jpg');
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 20px;
+    height: 450px;
     width: 300px;
     float: left;
     padding: 20px;
     box-sizing: border-box;
+    -webkit-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+     box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
 }
 
 .right-side {
-    border-style: dotted;
-    border-width: 3px;
-    height: 500px;
+    background-image: url('../images/paper.jpg');
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 20px;
+    height: 450px;
     width: 300px;
     float: right;
     padding: 20px;
     box-sizing: border-box;
+    -webkit-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
 }
