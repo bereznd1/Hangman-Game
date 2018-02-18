@@ -8,7 +8,6 @@ var currentArtist = artists[Math.floor(Math.random() * artists.length)];
 var wins = 0;
 var remain = 12;
 var s;
-var getHint = document.getElementById("hint");
 
 
 //empty array to store guesses
@@ -145,6 +144,8 @@ function pauseDMX() {
 
 //activates when New Word button is clicked & picks a new word plus resets guesses remaining & letters already guessed
 function reset() {
+    
+    var getHint = document.getElementById("hint");
 
     // a new artist is picked
     currentArtist = artists[Math.floor(Math.random() * artists.length)];
@@ -213,6 +214,8 @@ function reset() {
 //filling answer array with underscores when game first starts
 function startUp() {
 
+    var getHint = document.getElementById("hint");
+
     //fills in the right number of remaining guesses & wins
     document.getElementById("guessremaining").innerHTML = remain;
     document.getElementById("wins").innerHTML = wins;
@@ -277,6 +280,8 @@ function startUp() {
     //when a key is pressed, the browser registers what key it is
     document.onkeyup = function (event) {
         var userGuess = event.key;
+        var getArtistImage =  document.getElementById("artist-image");
+        var getWinnerTitle = document.getElementById("winnertitle");
 
         //cycles thru all the letters in the current random artist
         for (var i = 0; i < currentArtist.length; i++) {
@@ -333,8 +338,8 @@ function startUp() {
             //fills in the page's left div with the right info based on which artist was guessed
             if (currentArtist === "tupac") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/pac.jpg' height='50%'></center><p>Highly controversial gangsta rapper who was universally accepted as an extraordinary & influential talent after being killed in 1996. <strong>2Pac</strong> became the unlikely martyr of gangsta rap, & a tragic symbol of the toll its lifestyle exacted on urban black America.</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>Ambitionz Az A Ridah</strong>' - 2Pac";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/pac.jpg' height='50%'></center><p>Highly controversial gangsta rapper who was universally accepted as an extraordinary & influential talent after being killed in 1996. <strong>2Pac</strong> became the unlikely martyr of gangsta rap, & a tragic symbol of the toll its lifestyle exacted on urban black America.</p>";
+                getWinnerTitle.innerHTML = "'<strong>Ambitionz Az A Ridah</strong>' - 2Pac";
                 pauseOutkast();
                 pauseRedman();
                 pauseEminem();
@@ -350,8 +355,8 @@ function startUp() {
 
             if (currentArtist === "outkast") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/outkast.jpg'></center><p>Atlanta duo whose blend of gritty Southern soul, fluid raps, & low-slung funk epitomized hip-hop's rising force, the Dirty South, during the '90s.</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>So Fresh So Clean</strong>' - Outkast";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/outkast.jpg'></center><p>Atlanta duo whose blend of gritty Southern soul, fluid raps, & low-slung funk epitomized hip-hop's rising force, the Dirty South, during the '90s.</p>";
+                getWinnerTitle.innerHTML = "'<strong>So Fresh So Clean</strong>' - Outkast";
                 pauseTupac();
                 pauseRedman();
                 pauseEminem();
@@ -368,8 +373,8 @@ function startUp() {
 
             if (currentArtist === "redman") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/redman.jpg'></center><p>Never quite a superstar, <strong>Redman</strong> was nonetheless one of the most off-the-wall, beloved, and enduring rappers of the '90s and 2000s. He is known for his fluid vocal style that was sometimes satirical, sometimes silly, and always tough.</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>Pick It Up</strong>' - Redman";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/redman.jpg'></center><p>Never quite a superstar, <strong>Redman</strong> was nonetheless one of the most off-the-wall, beloved, and enduring rappers of the '90s and 2000s. He is known for his fluid vocal style that was sometimes satirical, sometimes silly, and always tough.</p>";
+                getWinnerTitle.innerHTML = "'<strong>Pick It Up</strong>' - Redman";
                 pauseTupac();
                 pauseOutkast();
                 pauseEminem();
@@ -386,8 +391,8 @@ function startUp() {
 
             if (currentArtist === "eminem") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/eminem.jpg'></center><p>The best-selling white rapper of all time, alternately comic & confrontational, both hugely talented & highly controversial. On sheer verbal skills, <strong>Eminem</strong> was one of the greatest MCs of his generation -- rapid, fluid, dexterous, & unpredictable.</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>My Fault</strong>' - Eminem";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/eminem.jpg'></center><p>The best-selling white rapper of all time, alternately comic & confrontational, both hugely talented & highly controversial. On sheer verbal skills, <strong>Eminem</strong> was one of the greatest MCs of his generation -- rapid, fluid, dexterous, & unpredictable.</p>";
+                getWinnerTitle.innerHTML = "'<strong>My Fault</strong>' - Eminem";
                 pauseTupac();
                 pauseRedman();
                 pauseOutkast();
@@ -404,8 +409,8 @@ function startUp() {
 
             if (currentArtist === "wu-tang") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/wutang.jpg'></center><p>Sprawling group of hip-hop revolutionaries who brought to the rap mainstream their sparse, dark funk & bracingly violent martial-arts imagery. Emerging in 1993, the Staten Island-based <strong>Wu-Tang Clan</strong> proved to be the most revolutionary rap group of the mid-'90s.</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>CREAM</strong>' - Wu-Tang Clan";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/wutang.jpg'></center><p>Sprawling group of hip-hop revolutionaries who brought to the rap mainstream their sparse, dark funk & bracingly violent martial-arts imagery. Emerging in 1993, the Staten Island-based <strong>Wu-Tang Clan</strong> proved to be the most revolutionary rap group of the mid-'90s.</p>";
+                getWinnerTitle.innerHTML = "'<strong>CREAM</strong>' - Wu-Tang Clan";
                 pauseTupac();
                 pauseRedman();
                 pauseOutkast();
@@ -423,8 +428,8 @@ function startUp() {
 
             if (currentArtist === "krs-one") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/krsone.jpg'></center><p><strong>KRS-One</strong> was the leader of Boogie Down Productions, one of the most influential hardcore rap groups of the '80s. At the height of his career, KRS-One was known for his furiously political and socially conscious raps, which is the source of his nickname, 'the Teacher.'</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>Sound of Da Police</strong>' - KRS-One";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/krsone.jpg'></center><p><strong>KRS-One</strong> was the leader of Boogie Down Productions, one of the most influential hardcore rap groups of the '80s. At the height of his career, KRS-One was known for his furiously political and socially conscious raps, which is the source of his nickname, 'the Teacher.'</p>";
+                getWinnerTitle.innerHTML = "'<strong>Sound of Da Police</strong>' - KRS-One";
                 pauseTupac();
                 pauseRedman();
                 pauseOutkast();
@@ -441,8 +446,8 @@ function startUp() {
 
             if (currentArtist === "rakim") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/rakim.jpg'></center><p>Although he never became a household name, <strong>Rakim</strong> is near-universally acknowledged as one of the greatest MCs -- perhaps the greatest -- of all time within the hip-hop community. His flow is smooth and liquid, inflected with jazz rhythms and carried off with an effortless cool.</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>I Ain't No Joke</strong>' - Rakim";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/rakim.jpg'></center><p>Although he never became a household name, <strong>Rakim</strong> is near-universally acknowledged as one of the greatest MCs -- perhaps the greatest -- of all time within the hip-hop community. His flow is smooth and liquid, inflected with jazz rhythms and carried off with an effortless cool.</p>";
+                getWinnerTitle.innerHTML = "'<strong>I Ain't No Joke</strong>' - Rakim";
                 pauseTupac();
                 pauseRedman();
                 pauseOutkast();
@@ -460,8 +465,8 @@ function startUp() {
 
             if (currentArtist === "mobbdeep") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/mobb.jpg'></center><p>Queensbridge rappers whose stark productions and bleak, poetic depictions of New York street life were responsible for several hip-hop milestones. <strong>Mobb Deep</strong> stood tall as East Coast hardcore rap figureheads on the basis of their classic album <em>The Infamous</em> (1995).</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>Shook Ones Pt. 2</strong>' - Mobb Deep";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/mobb.jpg'></center><p>Queensbridge rappers whose stark productions and bleak, poetic depictions of New York street life were responsible for several hip-hop milestones. <strong>Mobb Deep</strong> stood tall as East Coast hardcore rap figureheads on the basis of their classic album <em>The Infamous</em> (1995).</p>";
+                getWinnerTitle.innerHTML = "'<strong>Shook Ones Pt. 2</strong>' - Mobb Deep";
                 pauseTupac();
                 pauseRedman();
                 pauseOutkast();
@@ -479,8 +484,8 @@ function startUp() {
 
             if (currentArtist === "publicenemy") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/public.jpg'></center><p><strong>Public Enemy</strong> pioneered a variation of hardcore rap that was musically & politically revolutionary. With his powerful baritone, lead rapper Chuck D rhymed about all kinds of social problems, often condoning revolutionary tactics and social activism.</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>Bring The Noise</strong>' - Public Enemy";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/public.jpg'></center><p><strong>Public Enemy</strong> pioneered a variation of hardcore rap that was musically & politically revolutionary. With his powerful baritone, lead rapper Chuck D rhymed about all kinds of social problems, often condoning revolutionary tactics and social activism.</p>";
+                getWinnerTitle.innerHTML = "'<strong>Bring The Noise</strong>' - Public Enemy";
                 pauseTupac();
                 pauseRedman();
                 pauseOutkast();
@@ -498,8 +503,8 @@ function startUp() {
 
             if (currentArtist === "dmx") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/dmx.jpg'></center><p>Following the deaths of 2Pac & Biggie, <strong>DMX</strong> took over as the undisputed king of hardcore rap. Everything about DMX was intense, from his muscular, tattooed physique to his gruff, barking delivery, which made a perfect match for his lyrical obsession with dogs.</p>";
-                document.getElementById("winnertitle").innerHTML = "'<strong>Ruff Ryders Anthem</strong>' - DMX";
+                getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/dmx.jpg'></center><p>Following the deaths of 2Pac & Biggie, <strong>DMX</strong> took over as the undisputed king of hardcore rap. Everything about DMX was intense, from his muscular, tattooed physique to his gruff, barking delivery, which made a perfect match for his lyrical obsession with dogs.</p>";
+                getWinnerTitle.innerHTML = "'<strong>Ruff Ryders Anthem</strong>' - DMX";
                 pauseTupac();
                 pauseRedman();
                 pauseOutkast();
