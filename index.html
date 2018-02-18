@@ -48,11 +48,31 @@
     </audio>
 
 
+    <audio id="rakim">
+        <source src="assets/sounds/joke.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+
+
+    <audio id="mobb">
+        <source src="assets/sounds/shook.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+
+
+    <audio id="pe">
+        <source src="assets/sounds/noise.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+
+
+    <audio id="dmx">
+        <source src="assets/sounds/ruff.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+
+
     <div id="allcontent">
 
         <header>
             <br>
-            <img src="assets/images/hangman.png">
+            <center><img src="assets/images/hangman.png"></center>
         </header>
 
         <main>
@@ -63,6 +83,8 @@
 
             <div class="left-side">
 
+                
+                
                 <div id="artist-image"></div>
 
             </div>
@@ -70,6 +92,8 @@
             <div class="right-side">
 
                 <h3 id="instructions">Press any letter to get started!</h3>
+
+                <div class="hint">HINT: <span id="hint"></span></div>
 
                 <br>
 
@@ -95,6 +119,9 @@
 
                 <div id="currentword">
                 </div>
+
+
+                
 
                 <br>
 
@@ -123,8 +150,10 @@
 
                 <div id="alreadyguessed">
                 </div>
+                
+                <br id="break">
 
-                <br>
+                <center><button id="reset" onclick="reset()">New Word</button></center>
 
 
             </div>

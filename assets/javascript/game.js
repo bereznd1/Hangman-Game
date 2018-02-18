@@ -1,5 +1,5 @@
 //array of possible artists
-var artists = ["tupac", "outkast", "redman", "eminem", "wu-tang", "krs-one"];
+var artists = ["tupac", "outkast", "redman", "eminem", "wu-tang", "krs-one", "rakim", "mobbdeep", "publicenemy", "dmx"];
 
 //choosing an artist at random from the array
 var currentArtist = artists[Math.floor(Math.random() * artists.length)];
@@ -9,60 +9,61 @@ var wins = 0;
 var remain = 12;
 var s;
 
+
 //empty array to store guesses
 var answerArray = [];
 
 //playing music
 function playTupac() {
     var x = document.getElementById("tupac");
-    x.currentTime = 0;  
-    x.play(); 
+    x.currentTime = 0;
+    x.play();
 }
 
 function pauseTupac() {
-    var x = document.getElementById("tupac"); 
-    x.pause(); 
+    var x = document.getElementById("tupac");
+    x.pause();
 }
 
 
 
 function playOutkast() {
-    var x = document.getElementById("outkast");  
-    x.currentTime = 0; 
-    x.play(); 
+    var x = document.getElementById("outkast");
+    x.currentTime = 0;
+    x.play();
 }
 
 function pauseOutkast() {
-    var x = document.getElementById("outkast");  
-    x.pause(); 
+    var x = document.getElementById("outkast");
+    x.pause();
 }
 
 
 
 
 function playRedman() {
-    var x = document.getElementById("redman");  
-    x.currentTime = 0; 
-    x.play(); 
+    var x = document.getElementById("redman");
+    x.currentTime = 0;
+    x.play();
 }
 
 function pauseRedman() {
-    var x = document.getElementById("redman");  
-    x.pause(); 
+    var x = document.getElementById("redman");
+    x.pause();
 }
 
 
 
 
 function playEminem() {
-    var x = document.getElementById("eminem");  
-    x.currentTime = 0; 
-    x.play(); 
+    var x = document.getElementById("eminem");
+    x.currentTime = 0;
+    x.play();
 }
 
 function pauseEminem() {
-    var x = document.getElementById("eminem");  
-    x.pause(); 
+    var x = document.getElementById("eminem");
+    x.pause();
 }
 
 
@@ -70,27 +71,145 @@ function pauseEminem() {
 
 
 function playWuTang() {
-    var x = document.getElementById("wu");  
-    x.currentTime = 0; 
-    x.play(); 
+    var x = document.getElementById("wu");
+    x.currentTime = 0;
+    x.play();
 }
 
 function pauseWuTang() {
-    var x = document.getElementById("wu");  
-    x.pause(); 
+    var x = document.getElementById("wu");
+    x.pause();
 }
 
 
 
 function playKRS() {
-    var x = document.getElementById("krs");  
-    x.play(); 
+    var x = document.getElementById("krs");
+    x.play();
 }
 
 function pauseKRS() {
-    var x = document.getElementById("krs");  
-    x.pause(); 
+    var x = document.getElementById("krs");
+    x.pause();
 }
+
+
+
+function playRakim() {
+    var x = document.getElementById("rakim");
+    x.play();
+}
+
+function pauseRakim() {
+    var x = document.getElementById("rakim");
+    x.pause();
+}
+
+
+
+function playMobb() {
+    var x = document.getElementById("mobb");
+    x.play();
+}
+
+function pauseMobb() {
+    var x = document.getElementById("mobb");
+    x.pause();
+}
+
+
+
+function playPE() {
+    var x = document.getElementById("pe");
+    x.play();
+}
+
+function pausePE() {
+    var x = document.getElementById("pe");
+    x.pause();
+}
+
+
+
+function playDMX() {
+    var x = document.getElementById("dmx");
+    x.play();
+}
+
+function pauseDMX() {
+    var x = document.getElementById("dmx");
+    x.pause();
+}
+
+
+
+function reset() {
+
+    //after the loss, a new artist is picked
+    currentArtist = artists[Math.floor(Math.random() * artists.length)];
+
+    for (var i = 0; i < currentArtist.length; i++) {
+
+        answerArray[i] = "_";
+
+    }
+
+    s = answerArray.join(" ");
+    document.getElementById("currentword").innerHTML = s;
+
+        //displays hint based on artist
+        if (currentArtist === "tupac") {
+            document.getElementById("hint").innerHTML = "All eyes were on him...";
+        }
+    
+        if (currentArtist  === "outkast") {
+            document.getElementById("hint").innerHTML = "Just 2 dope boyz in a cadillac.";
+        }
+    
+        if (currentArtist  === "redman") {
+            document.getElementById("hint").innerHTML = "Newark's favorite weed-smoker...";
+        }
+    
+        if (currentArtist  === "eminem") {
+            document.getElementById("hint").innerHTML = "Do you like violence?";
+        }
+    
+        if (currentArtist  === "wu-tang") {
+            document.getElementById("hint").innerHTML = "From the slums of Shaolin...";
+        }
+    
+        if (currentArtist  === "krs-one") {
+            document.getElementById("hint").innerHTML = "His 9mm went BANG...";
+        }
+    
+        if (currentArtist  === "rakim") {
+            document.getElementById("hint").innerHTML = "He aimed to get paid in full...";
+        }
+    
+        if (currentArtist  === "mobbdeep") {
+            document.getElementById("hint").innerHTML = "Official Queensbridge murderers...";
+        }
+    
+        if (currentArtist  === "publicenemy") {
+            document.getElementById("hint").innerHTML = "Yeahhhh boiiii!";
+        }
+    
+        if (currentArtist  === "dmx") {
+            document.getElementById("hint").innerHTML = "He's gon' give it to ya!";
+        }
+
+
+    //reset remain back to 12
+    remain = 12;
+    document.getElementById("guessremaining").innerHTML = remain;
+
+    //clear the Letters Already Guessed div
+    document.getElementById("alreadyguessed").innerHTML = "";
+
+
+
+}
+
 
 
 
@@ -111,6 +230,52 @@ function startUp() {
     //turn the array into a string & puts it into the current word div   
     s = answerArray.join(" ");
     document.getElementById("currentword").innerHTML = s;
+
+
+
+    //displays hint based on artist
+    if (currentArtist === "tupac") {
+        document.getElementById("hint").innerHTML = "All eyes were on him...";
+    }
+
+    if (currentArtist  === "outkast") {
+        document.getElementById("hint").innerHTML = "Just 2 dope boyz in a cadillac.";
+    }
+
+    if (currentArtist  === "redman") {
+        document.getElementById("hint").innerHTML = "Newark's favorite weed-smoker...";
+    }
+
+    if (currentArtist  === "eminem") {
+        document.getElementById("hint").innerHTML = "Do you like violence?";
+    }
+
+    if (currentArtist  === "wu-tang") {
+        document.getElementById("hint").innerHTML = "From the slums of Shaolin...";
+    }
+
+    if (currentArtist  === "krs-one") {
+        document.getElementById("hint").innerHTML = "His 9mm went BANG...";
+    }
+
+    if (currentArtist  === "rakim") {
+        document.getElementById("hint").innerHTML = "He aimed to get paid in full...";
+    }
+
+    if (currentArtist  === "mobbdeep") {
+        document.getElementById("hint").innerHTML = "Official Queensbridge murderers...";
+    }
+
+    if (currentArtist  === "publicenemy") {
+        document.getElementById("hint").innerHTML = "Yeahhhh boiiii!";
+    }
+
+    if (currentArtist  === "dmx") {
+        document.getElementById("hint").innerHTML = "He's gon' give it to ya!";
+    }
+
+
+
 
 
     //when a key is pressed, the browser registers what key it is
@@ -135,7 +300,7 @@ function startUp() {
         var guessArray = Array.from(guessContents);
 
         //sets up array of actual characters that could be in an artist name, so if user accidentally types a random character like "^", it doesn't show up in letters guessed or count towards guesses remaining
-        var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","-","&"];
+        var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "-", "&"];
 
         //if user guess doesnt correspond to any letters in current artist's name...
         if (currentArtist.indexOf(userGuess) === -1 && guessArray.indexOf(userGuess) === -1 && alphabet.indexOf(userGuess) !== -1) {
@@ -173,19 +338,23 @@ function startUp() {
         //if all blanks have been filled in, a win is added
         var answerArrayString = answerArray.toString();
         if (answerArrayString.indexOf("_") === -1) {
-            
+
 
             if (currentArtist === "tupac") {
 
-                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/pac.jpg' height='50%'></center><p>Highly controversial gangsta rapper who was universally accepted as an extraordinary & influential talent after killed 1996. <strong>2Pac</strong> became the unlikely martyr of gangsta rap, & a tragic symbol of the toll its lifestyle exacted on urban black America.</p>";
+                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/pac.jpg' height='50%'></center><p>Highly controversial gangsta rapper who was universally accepted as an extraordinary & influential talent after being killed in 1996. <strong>2Pac</strong> became the unlikely martyr of gangsta rap, & a tragic symbol of the toll its lifestyle exacted on urban black America.</p>";
                 document.getElementById("winnertitle").innerHTML = "'<strong>Ambitionz Az A Ridah</strong>' - 2Pac";
                 pauseOutkast();
                 pauseRedman();
                 pauseEminem();
                 pauseWuTang();
                 pauseKRS();
+                pauseRakim();
+                pauseMobb();
+                pausePE();
+                pauseDMX();
                 playTupac();
-             
+
             }
 
             if (currentArtist === "outkast") {
@@ -197,8 +366,12 @@ function startUp() {
                 pauseEminem();
                 pauseWuTang();
                 pauseKRS();
+                pauseRakim();
+                pauseMobb();
+                pausePE();
+                pauseDMX();
                 playOutkast();
-               
+
             }
 
 
@@ -211,8 +384,12 @@ function startUp() {
                 pauseEminem();
                 pauseWuTang();
                 pauseKRS();
+                pauseRakim();
+                pauseMobb();
+                pausePE();
+                pauseDMX();
                 playRedman();
-               
+
             }
 
 
@@ -222,11 +399,15 @@ function startUp() {
                 document.getElementById("winnertitle").innerHTML = "'<strong>My Fault</strong>' - Eminem";
                 pauseTupac();
                 pauseRedman();
-                pauseOutkast(); 
+                pauseOutkast();
                 pauseWuTang();
-                pauseKRS();                               
+                pauseKRS();
+                pauseRakim();
+                pauseMobb();
+                pausePE();
+                pauseDMX();
                 playEminem();
-                
+
             }
 
 
@@ -236,12 +417,18 @@ function startUp() {
                 document.getElementById("winnertitle").innerHTML = "'<strong>CREAM</strong>' - Wu-Tang Clan";
                 pauseTupac();
                 pauseRedman();
-                pauseOutkast(); 
+                pauseOutkast();
                 pauseEminem();
-                pauseKRS();                
+                pauseKRS();
+                pauseRakim();
+                pauseMobb();
+                pausePE();
+                pauseDMX();
                 playWuTang();
-               
+
             }
+
+
 
             if (currentArtist === "krs-one") {
 
@@ -249,42 +436,164 @@ function startUp() {
                 document.getElementById("winnertitle").innerHTML = "'<strong>Sound of Da Police</strong>' - KRS-One";
                 pauseTupac();
                 pauseRedman();
-                pauseOutkast(); 
+                pauseOutkast();
                 pauseEminem();
-                pauseWuTang();               
+                pauseWuTang();
+                pauseRakim();
+                pauseMobb();
+                pausePE();
+                pauseDMX();
                 playKRS();
-                
+
+            }
+
+
+            //ssssssssssssssss    
+
+
+            if (currentArtist === "rakim") {
+
+                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/rakim.jpg'></center><p>Although he never became a household name, <strong>Rakim</strong> is near-universally acknowledged as one of the greatest MCs -- perhaps the greatest -- of all time within the hip-hop community. His flow is smooth and liquid, inflected with jazz rhythms and carried off with an effortless cool.</p>";
+                document.getElementById("winnertitle").innerHTML = "'<strong>I Ain't No Joke</strong>' - Rakim";
+                pauseTupac();
+                pauseRedman();
+                pauseOutkast();
+                pauseEminem();
+                pauseWuTang();
+                pauseKRS();
+                pauseMobb();
+                pausePE();
+                pauseDMX();
+                playRakim();
+
+            }
+
+
+
+            if (currentArtist === "mobbdeep") {
+
+                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/mobb.jpg'></center><p>Queensbridge rappers whose stark productions and bleak, poetic depictions of New York street life were responsible for several hip-hop milestones. <strong>Mobb Deep</strong> stood tall as East Coast hardcore rap figureheads on the basis of their classic album <em>The Infamous</em> (1995).</p>";
+                document.getElementById("winnertitle").innerHTML = "'<strong>Shook Ones Pt. 2</strong>' - Mobb Deep";
+                pauseTupac();
+                pauseRedman();
+                pauseOutkast();
+                pauseEminem();
+                pauseWuTang();
+                pauseKRS();
+                pauseRakim();
+                pausePE();
+                pauseDMX();
+                playMobb();
+
+            }
+
+
+
+            if (currentArtist === "publicenemy") {
+
+                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/public.jpg'></center><p><strong>Public Enemy</strong> pioneered a variation of hardcore rap that was musically & politically revolutionary. With his powerful baritone, lead rapper Chuck D rhymed about all kinds of social problems, often condoning revolutionary tactics and social activism.</p>";
+                document.getElementById("winnertitle").innerHTML = "'<strong>Bring The Noise</strong>' - Public Enemy";
+                pauseTupac();
+                pauseRedman();
+                pauseOutkast();
+                pauseEminem();
+                pauseWuTang();
+                pauseKRS();
+                pauseRakim();
+                pauseMobb();
+                pauseDMX();
+                playPE();
+
+            }
+
+
+
+            if (currentArtist === "dmx") {
+
+                document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/dmx.jpg'></center><p>Following the deaths of 2Pac & Biggie, <strong>DMX</strong> took over as the undisputed king of hardcore rap. Everything about DMX was intense, from his muscular, tattooed physique to his gruff, barking delivery, which made a perfect match for his lyrical obsession with dogs.</p>";
+                document.getElementById("winnertitle").innerHTML = "'<strong>Ruff Ryders Anthem</strong>' - DMX";
+                pauseTupac();
+                pauseRedman();
+                pauseOutkast();
+                pauseEminem();
+                pauseWuTang();
+                pauseKRS();
+                pauseRakim();
+                pauseMobb();
+                pausePE();
+                playDMX();
+
             }
 
 
 
 
 
-            
+
             //new wins value is recorded
             wins++;
             document.getElementById("wins").innerHTML = wins;
-            
 
-           
+
+
 
             //after the win is made, a new artist is picked
             currentArtist = artists[Math.floor(Math.random() * artists.length)];
 
-            
+
 
             for (var i = 0; i < currentArtist.length; i++) {
 
                 answerArray[i] = "_";
 
-                
+
 
             }
-           // -- make it clear out the current div before placing new _ _ _ for artist name into it
+            // -- make it clear out the current div before placing new _ _ _ for artist name into it
             s = answerArray.join(" ");
-            document.getElementById("currentword").innerHTML = " ";
             document.getElementById("currentword").innerHTML = s;
-            
+
+                //displays hint based on artist
+    if (currentArtist === "tupac") {
+        document.getElementById("hint").innerHTML = "All eyes were on him...";
+    }
+
+    if (currentArtist  === "outkast") {
+        document.getElementById("hint").innerHTML = "Just 2 dope boyz in a cadillac.";
+    }
+
+    if (currentArtist  === "redman") {
+        document.getElementById("hint").innerHTML = "Newark's favorite weed-smoker...";
+    }
+
+    if (currentArtist  === "eminem") {
+        document.getElementById("hint").innerHTML = "Do you like violence?";
+    }
+
+    if (currentArtist  === "wu-tang") {
+        document.getElementById("hint").innerHTML = "From the slums of Shaolin...";
+    }
+
+    if (currentArtist  === "krs-one") {
+        document.getElementById("hint").innerHTML = "His 9mm went BANG...";
+    }
+
+    if (currentArtist  === "rakim") {
+        document.getElementById("hint").innerHTML = "He aimed to get paid in full...";
+    }
+
+    if (currentArtist  === "mobbdeep") {
+        document.getElementById("hint").innerHTML = "Official Queensbridge murderers...";
+    }
+
+    if (currentArtist  === "publicenemy") {
+        document.getElementById("hint").innerHTML = "Yeahhhh boiiii!";
+    }
+
+    if (currentArtist  === "dmx") {
+        document.getElementById("hint").innerHTML = "He's gon' give it to ya!";
+    }
+
 
 
             //reset remain back to 12
@@ -293,7 +602,21 @@ function startUp() {
 
             //clear the Letters Already Guessed div
             document.getElementById("alreadyguessed").innerHTML = "";
-            
+
+
+            //Alerts the user when they reach a certain score
+            if (wins === 5) {
+                alert("Looks like you know your Hip-Hop!")
+            }
+
+            if (wins === 10) {
+                alert("Damn! You got mad skill!");
+            }
+
+            if (wins === 15) {
+                alert("You are the true Hip-Hop master!")
+            }
+
 
         }
 
@@ -313,6 +636,47 @@ function startUp() {
             s = answerArray.join(" ");
             document.getElementById("currentword").innerHTML = s;
 
+                //displays hint based on artist
+    if (currentArtist === "tupac") {
+        document.getElementById("hint").innerHTML = "All eyes were on him...";
+    }
+
+    if (currentArtist  === "outkast") {
+        document.getElementById("hint").innerHTML = "Just 2 dope boyz in a cadillac.";
+    }
+
+    if (currentArtist  === "redman") {
+        document.getElementById("hint").innerHTML = "Newark's favorite weed-smoker...";
+    }
+
+    if (currentArtist  === "eminem") {
+        document.getElementById("hint").innerHTML = "Do you like violence?";
+    }
+
+    if (currentArtist  === "wu-tang") {
+        document.getElementById("hint").innerHTML = "From the slums of Shaolin...";
+    }
+
+    if (currentArtist  === "krs-one") {
+        document.getElementById("hint").innerHTML = "His 9mm went BANG...";
+    }
+
+    if (currentArtist  === "rakim") {
+        document.getElementById("hint").innerHTML = "He aimed to get paid in full...";
+    }
+
+    if (currentArtist  === "mobbdeep") {
+        document.getElementById("hint").innerHTML = "Official Queensbridge murderers...";
+    }
+
+    if (currentArtist  === "publicenemy") {
+        document.getElementById("hint").innerHTML = "Yeahhhh boiiii!";
+    }
+
+    if (currentArtist  === "dmx") {
+        document.getElementById("hint").innerHTML = "He's gon' give it to ya!";
+    }
+
 
             //reset remain back to 12
             remain = 12;
@@ -330,9 +694,6 @@ function startUp() {
 
 
 
-
-
-
     }
 
 
@@ -340,15 +701,3 @@ function startUp() {
 }
 
 
-
-
-
-
-
-
-
-
-/*
-
-
-*/

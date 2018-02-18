@@ -22,7 +22,7 @@ body {
     margin-bottom: 20px;
     font-family: "Abuse";
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bolder;
     color: #ffffff;
     text-shadow: 2px 2px 9px #000000;
@@ -35,6 +35,77 @@ body {
 #instructions {
     font-size: 17px;
     text-align: center;
+}
+
+#hint {
+    font-weight: 500;
+}
+
+.hint {
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+#wins {
+    width: 40px;
+    border-radius: 10px;
+    padding-left: 7px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+#currentword {
+    width: 150px;
+    border-radius: 10px;
+    padding-left: 7px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 3px;
+    font-weight: 900;
+
+}
+
+#guessremaining {
+    width: 25px;
+    border-radius: 10px;
+    padding-left: 7px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 3px;
+    font-weight: 900;
+    clear: both;
+}
+
+#alreadyguessed {
+    width: 230px;
+    border-radius: 10px;
+    padding-left: 7px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 3px;
+    font-weight: 900;
+    font-size: 13px;
+}
+
+#break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 15px; /* change this to whatever height you want it */
 }
 
 #allcontent {
@@ -64,7 +135,7 @@ body {
     border-style: solid;
     border-width: 10px;
     border-radius: 20px;
-    height: 450px;
+    height: 490px;
     width: 300px;
     float: left;
     padding: 20px;
@@ -79,12 +150,23 @@ body {
     border-style: solid;
     border-width: 10px;
     border-radius: 20px;
-    height: 450px;
+    height: 490px;
     width: 300px;
     float: right;
-    padding: 20px;
+    padding: 10px 20px;
     box-sizing: border-box;
     -webkit-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
     box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+}
+
+#reset {
+
+    text-align: center;
+    background-color: red;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-style: none;
+
 }
