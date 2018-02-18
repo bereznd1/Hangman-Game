@@ -8,12 +8,13 @@ var currentArtist = artists[Math.floor(Math.random() * artists.length)];
 var wins = 0;
 var remain = 12;
 var s;
+var getHint = document.getElementById("hint");
 
 
 //empty array to store guesses
 var answerArray = [];
 
-//playing music
+//playing music functions
 function playTupac() {
     var x = document.getElementById("tupac");
     x.currentTime = 0;
@@ -142,10 +143,10 @@ function pauseDMX() {
 }
 
 
-
+//activates when New Word button is clicked & picks a new word plus resets guesses remaining & letters already guessed
 function reset() {
 
-    //after the loss, a new artist is picked
+    // a new artist is picked
     currentArtist = artists[Math.floor(Math.random() * artists.length)];
 
     for (var i = 0; i < currentArtist.length; i++) {
@@ -157,67 +158,62 @@ function reset() {
     s = answerArray.join(" ");
     document.getElementById("currentword").innerHTML = s;
 
-        //displays hint based on artist
-        if (currentArtist === "tupac") {
-            document.getElementById("hint").innerHTML = "All eyes were on him...";
-        }
-    
-        if (currentArtist  === "outkast") {
-            document.getElementById("hint").innerHTML = "Just 2 dope boyz in a cadillac.";
-        }
-    
-        if (currentArtist  === "redman") {
-            document.getElementById("hint").innerHTML = "Newark's favorite weed-smoker...";
-        }
-    
-        if (currentArtist  === "eminem") {
-            document.getElementById("hint").innerHTML = "Do you like violence?";
-        }
-    
-        if (currentArtist  === "wu-tang") {
-            document.getElementById("hint").innerHTML = "From the slums of Shaolin...";
-        }
-    
-        if (currentArtist  === "krs-one") {
-            document.getElementById("hint").innerHTML = "His 9mm went BANG...";
-        }
-    
-        if (currentArtist  === "rakim") {
-            document.getElementById("hint").innerHTML = "He aimed to get paid in full...";
-        }
-    
-        if (currentArtist  === "mobbdeep") {
-            document.getElementById("hint").innerHTML = "Official Queensbridge murderers...";
-        }
-    
-        if (currentArtist  === "publicenemy") {
-            document.getElementById("hint").innerHTML = "Yeahhhh boiiii!";
-        }
-    
-        if (currentArtist  === "dmx") {
-            document.getElementById("hint").innerHTML = "He's gon' give it to ya!";
-        }
+    //displays hint based on artist
+    if (currentArtist === "tupac") {
+        getHint.innerHTML = "All eyes were on him...";
+    }
+
+    if (currentArtist === "outkast") {
+        getHint.innerHTML = "Just 2 dope boyz in a cadillac.";
+    }
+
+    if (currentArtist === "redman") {
+        getHint.innerHTML = "Newark's favorite weed-smoker...";
+    }
+
+    if (currentArtist === "eminem") {
+        getHint.innerHTML = "Do you like violence?";
+    }
+
+    if (currentArtist === "wu-tang") {
+        getHint.innerHTML = "From the slums of Shaolin...";
+    }
+
+    if (currentArtist === "krs-one") {
+        getHint.innerHTML = "His 9mm went BANG...";
+    }
+
+    if (currentArtist === "rakim") {
+        getHint.innerHTML = "He aimed to get paid in full...";
+    }
+
+    if (currentArtist === "mobbdeep") {
+        getHint.innerHTML = "Official Queensbridge murderers...";
+    }
+
+    if (currentArtist === "publicenemy") {
+        getHint.innerHTML = "Yeahhhh boiiii!";
+    }
+
+    if (currentArtist === "dmx") {
+        getHint.innerHTML = "He's gon' give it to ya!";
+    }
 
 
-    //reset remain back to 12
+    //resets remain back to 12
     remain = 12;
     document.getElementById("guessremaining").innerHTML = remain;
 
-    //clear the Letters Already Guessed div
+    //clears the Letters Already Guessed div
     document.getElementById("alreadyguessed").innerHTML = "";
 
-
-
 }
-
-
-
-
 
 
 //filling answer array with underscores when game first starts
 function startUp() {
 
+    //fills in the right number of remaining guesses & wins
     document.getElementById("guessremaining").innerHTML = remain;
     document.getElementById("wins").innerHTML = wins;
 
@@ -227,7 +223,7 @@ function startUp() {
 
     }
 
-    //turn the array into a string & puts it into the current word div   
+    //turn the underscore array into a string & puts it into the current word div   
     s = answerArray.join(" ");
     document.getElementById("currentword").innerHTML = s;
 
@@ -235,43 +231,43 @@ function startUp() {
 
     //displays hint based on artist
     if (currentArtist === "tupac") {
-        document.getElementById("hint").innerHTML = "All eyes were on him...";
+        getHint.innerHTML = "All eyes were on him...";
     }
 
-    if (currentArtist  === "outkast") {
-        document.getElementById("hint").innerHTML = "Just 2 dope boyz in a cadillac.";
+    if (currentArtist === "outkast") {
+        getHint.innerHTML = "Just 2 dope boyz in a cadillac.";
     }
 
-    if (currentArtist  === "redman") {
-        document.getElementById("hint").innerHTML = "Newark's favorite weed-smoker...";
+    if (currentArtist === "redman") {
+        getHint.innerHTML = "Newark's favorite weed-smoker...";
     }
 
-    if (currentArtist  === "eminem") {
-        document.getElementById("hint").innerHTML = "Do you like violence?";
+    if (currentArtist === "eminem") {
+        getHint.innerHTML = "Do you like violence?";
     }
 
-    if (currentArtist  === "wu-tang") {
-        document.getElementById("hint").innerHTML = "From the slums of Shaolin...";
+    if (currentArtist === "wu-tang") {
+        getHint.innerHTML = "From the slums of Shaolin...";
     }
 
-    if (currentArtist  === "krs-one") {
-        document.getElementById("hint").innerHTML = "His 9mm went BANG...";
+    if (currentArtist === "krs-one") {
+        getHint.innerHTML = "His 9mm went BANG...";
     }
 
-    if (currentArtist  === "rakim") {
-        document.getElementById("hint").innerHTML = "He aimed to get paid in full...";
+    if (currentArtist === "rakim") {
+        getHint.innerHTML = "He aimed to get paid in full...";
     }
 
-    if (currentArtist  === "mobbdeep") {
-        document.getElementById("hint").innerHTML = "Official Queensbridge murderers...";
+    if (currentArtist === "mobbdeep") {
+        getHint.innerHTML = "Official Queensbridge murderers...";
     }
 
-    if (currentArtist  === "publicenemy") {
-        document.getElementById("hint").innerHTML = "Yeahhhh boiiii!";
+    if (currentArtist === "publicenemy") {
+        getHint.innerHTML = "Yeahhhh boiiii!";
     }
 
-    if (currentArtist  === "dmx") {
-        document.getElementById("hint").innerHTML = "He's gon' give it to ya!";
+    if (currentArtist === "dmx") {
+        getHint.innerHTML = "He's gon' give it to ya!";
     }
 
 
@@ -294,7 +290,7 @@ function startUp() {
 
         }
 
-        //making sure if a letter is already in the "Letters already guessed" section, it doesnt appear again
+        //makes sure if a letter is already in the "Letters already guessed" section, it doesnt appear again
         var getGuesses = document.getElementById("alreadyguessed");
         var guessContents = getGuesses.innerHTML;
         var guessArray = Array.from(guessContents);
@@ -302,7 +298,7 @@ function startUp() {
         //sets up array of actual characters that could be in an artist name, so if user accidentally types a random character like "^", it doesn't show up in letters guessed or count towards guesses remaining
         var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "-", "&"];
 
-        //if user guess doesnt correspond to any letters in current artist's name...
+        //if user guess doesnt correspond to any letters in current artist's name & isn't already in the "Letters Already Guessed" section...
         if (currentArtist.indexOf(userGuess) === -1 && guessArray.indexOf(userGuess) === -1 && alphabet.indexOf(userGuess) !== -1) {
 
             //put that user guess into the "letters already guessed section"
@@ -311,18 +307,12 @@ function startUp() {
 
         }
 
-
-
-
         //turns the answer array items into a string & puts that string inside the Current Word div
         document.getElementById("currentword").innerHTML = answerArray.join(" ");
 
 
 
-
-
-
-        //subtract a point from remaining guesses if a letter is guessed thats not in the word
+        //subtracts a point from remaining guesses if a letter is guessed thats not in current artist name & isn't already in the "Letters Already Guessed" section...
         if (currentArtist.indexOf(userGuess) === -1 && guessArray.indexOf(userGuess) === -1 && alphabet.indexOf(userGuess) !== -1) {
             remain--;
             document.getElementById("guessremaining").innerHTML = remain;
@@ -340,6 +330,7 @@ function startUp() {
         if (answerArrayString.indexOf("_") === -1) {
 
 
+            //fills in the page's left div with the right info based on which artist was guessed
             if (currentArtist === "tupac") {
 
                 document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/pac.jpg' height='50%'></center><p>Highly controversial gangsta rapper who was universally accepted as an extraordinary & influential talent after being killed in 1996. <strong>2Pac</strong> became the unlikely martyr of gangsta rap, & a tragic symbol of the toll its lifestyle exacted on urban black America.</p>";
@@ -448,9 +439,6 @@ function startUp() {
             }
 
 
-            //ssssssssssssssss    
-
-
             if (currentArtist === "rakim") {
 
                 document.getElementById("artist-image").innerHTML = "<center><img class = 'artistpic' src='assets/images/rakim.jpg'></center><p>Although he never became a household name, <strong>Rakim</strong> is near-universally acknowledged as one of the greatest MCs -- perhaps the greatest -- of all time within the hip-hop community. His flow is smooth and liquid, inflected with jazz rhythms and carried off with an effortless cool.</p>";
@@ -526,10 +514,6 @@ function startUp() {
             }
 
 
-
-
-
-
             //new wins value is recorded
             wins++;
             document.getElementById("wins").innerHTML = wins;
@@ -537,7 +521,7 @@ function startUp() {
 
 
 
-            //after the win is made, a new artist is picked
+            //after the win is made, a new artist is picked & the "current word" div is filled with the right number of underscores based on how many letters are in that artist's name
             currentArtist = artists[Math.floor(Math.random() * artists.length)];
 
 
@@ -553,54 +537,54 @@ function startUp() {
             s = answerArray.join(" ");
             document.getElementById("currentword").innerHTML = s;
 
-                //displays hint based on artist
-    if (currentArtist === "tupac") {
-        document.getElementById("hint").innerHTML = "All eyes were on him...";
-    }
+            //displays hint based on artist
+            if (currentArtist === "tupac") {
+                getHint.innerHTML = "All eyes were on him...";
+            }
 
-    if (currentArtist  === "outkast") {
-        document.getElementById("hint").innerHTML = "Just 2 dope boyz in a cadillac.";
-    }
+            if (currentArtist === "outkast") {
+                getHint.innerHTML = "Just 2 dope boyz in a cadillac.";
+            }
 
-    if (currentArtist  === "redman") {
-        document.getElementById("hint").innerHTML = "Newark's favorite weed-smoker...";
-    }
+            if (currentArtist === "redman") {
+                getHint.innerHTML = "Newark's favorite weed-smoker...";
+            }
 
-    if (currentArtist  === "eminem") {
-        document.getElementById("hint").innerHTML = "Do you like violence?";
-    }
+            if (currentArtist === "eminem") {
+                getHint.innerHTML = "Do you like violence?";
+            }
 
-    if (currentArtist  === "wu-tang") {
-        document.getElementById("hint").innerHTML = "From the slums of Shaolin...";
-    }
+            if (currentArtist === "wu-tang") {
+                getHint.innerHTML = "From the slums of Shaolin...";
+            }
 
-    if (currentArtist  === "krs-one") {
-        document.getElementById("hint").innerHTML = "His 9mm went BANG...";
-    }
+            if (currentArtist === "krs-one") {
+                getHint.innerHTML = "His 9mm went BANG...";
+            }
 
-    if (currentArtist  === "rakim") {
-        document.getElementById("hint").innerHTML = "He aimed to get paid in full...";
-    }
+            if (currentArtist === "rakim") {
+                getHint.innerHTML = "He aimed to get paid in full...";
+            }
 
-    if (currentArtist  === "mobbdeep") {
-        document.getElementById("hint").innerHTML = "Official Queensbridge murderers...";
-    }
+            if (currentArtist === "mobbdeep") {
+                getHint.innerHTML = "Official Queensbridge murderers...";
+            }
 
-    if (currentArtist  === "publicenemy") {
-        document.getElementById("hint").innerHTML = "Yeahhhh boiiii!";
-    }
+            if (currentArtist === "publicenemy") {
+                getHint.innerHTML = "Yeahhhh boiiii!";
+            }
 
-    if (currentArtist  === "dmx") {
-        document.getElementById("hint").innerHTML = "He's gon' give it to ya!";
-    }
+            if (currentArtist === "dmx") {
+                getHint.innerHTML = "He's gon' give it to ya!";
+            }
 
 
 
-            //reset remain back to 12
+            //resets remain back to 12
             remain = 12;
             document.getElementById("guessremaining").innerHTML = remain;
 
-            //clear the Letters Already Guessed div
+            //clears the Letters Already Guessed div
             document.getElementById("alreadyguessed").innerHTML = "";
 
 
@@ -636,62 +620,55 @@ function startUp() {
             s = answerArray.join(" ");
             document.getElementById("currentword").innerHTML = s;
 
-                //displays hint based on artist
-    if (currentArtist === "tupac") {
-        document.getElementById("hint").innerHTML = "All eyes were on him...";
-    }
+            //displays hint based on artist
+            if (currentArtist === "tupac") {
+                getHint.innerHTML = "All eyes were on him...";
+            }
 
-    if (currentArtist  === "outkast") {
-        document.getElementById("hint").innerHTML = "Just 2 dope boyz in a cadillac.";
-    }
+            if (currentArtist === "outkast") {
+                getHint.innerHTML = "Just 2 dope boyz in a cadillac.";
+            }
 
-    if (currentArtist  === "redman") {
-        document.getElementById("hint").innerHTML = "Newark's favorite weed-smoker...";
-    }
+            if (currentArtist === "redman") {
+                getHint.innerHTML = "Newark's favorite weed-smoker...";
+            }
 
-    if (currentArtist  === "eminem") {
-        document.getElementById("hint").innerHTML = "Do you like violence?";
-    }
+            if (currentArtist === "eminem") {
+                getHint.innerHTML = "Do you like violence?";
+            }
 
-    if (currentArtist  === "wu-tang") {
-        document.getElementById("hint").innerHTML = "From the slums of Shaolin...";
-    }
+            if (currentArtist === "wu-tang") {
+                getHint.innerHTML = "From the slums of Shaolin...";
+            }
 
-    if (currentArtist  === "krs-one") {
-        document.getElementById("hint").innerHTML = "His 9mm went BANG...";
-    }
+            if (currentArtist === "krs-one") {
+                getHint.innerHTML = "His 9mm went BANG...";
+            }
 
-    if (currentArtist  === "rakim") {
-        document.getElementById("hint").innerHTML = "He aimed to get paid in full...";
-    }
+            if (currentArtist === "rakim") {
+                getHint.innerHTML = "He aimed to get paid in full...";
+            }
 
-    if (currentArtist  === "mobbdeep") {
-        document.getElementById("hint").innerHTML = "Official Queensbridge murderers...";
-    }
+            if (currentArtist === "mobbdeep") {
+                getHint.innerHTML = "Official Queensbridge murderers...";
+            }
 
-    if (currentArtist  === "publicenemy") {
-        document.getElementById("hint").innerHTML = "Yeahhhh boiiii!";
-    }
+            if (currentArtist === "publicenemy") {
+                getHint.innerHTML = "Yeahhhh boiiii!";
+            }
 
-    if (currentArtist  === "dmx") {
-        document.getElementById("hint").innerHTML = "He's gon' give it to ya!";
-    }
+            if (currentArtist === "dmx") {
+                getHint.innerHTML = "He's gon' give it to ya!";
+            }
 
 
-            //reset remain back to 12
+            //resets remain back to 12
             remain = 12;
             document.getElementById("guessremaining").innerHTML = remain;
 
-            //clear the Letters Already Guessed div
+            //clears the Letters Already Guessed div
             document.getElementById("alreadyguessed").innerHTML = "";
         }
-
-
-
-
-
-
-
 
 
     }
