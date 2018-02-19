@@ -1,3 +1,5 @@
+//ALL WORKING BUT 1 MAIN ISSUE: for some reason if the next word is shorter than the previous word, the extra letters from the previous word carry over. Don't understand why, since the "innerhtml" is supposed to replace the current word div's entire contents with the new word. 
+
 //array of possible artists
 var artists = ["tupac", "outkast", "redman", "eminem", "wu-tang", "krs-one", "rakim", "mobbdeep", "publicenemy", "dmx"];
 
@@ -144,7 +146,7 @@ function pauseDMX() {
 
 //activates when New Word button is clicked & picks a new word plus resets guesses remaining & letters already guessed
 function reset() {
-    
+
     var getHint = document.getElementById("hint");
 
     // a new artist is picked
@@ -280,7 +282,7 @@ function startUp() {
     //when a key is pressed, the browser registers what key it is
     document.onkeyup = function (event) {
         var userGuess = event.key;
-        var getArtistImage =  document.getElementById("artist-image");
+        var getArtistImage = document.getElementById("artist-image");
         var getWinnerTitle = document.getElementById("winnertitle");
 
         //cycles thru all the letters in the current random artist
@@ -535,10 +537,8 @@ function startUp() {
 
                 answerArray[i] = "_";
 
-
-
             }
-            // -- make it clear out the current div before placing new _ _ _ for artist name into it
+
             s = answerArray.join(" ");
             document.getElementById("currentword").innerHTML = s;
 
@@ -677,8 +677,6 @@ function startUp() {
 
 
     }
-
-
 
 }
 
