@@ -16,8 +16,10 @@
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
+<!--function to be run when the body loads up-->
 <body onload="startUp()">
-
+    
+    <!--creating the audio elements -->
     <audio id="tupac">
         <source src="assets/sounds/ambitionz.mp3" type="audio/mpeg"> Your browser does not support the audio element.
     </audio>
@@ -72,7 +74,9 @@
 
         <header>
             <br>
-            <center><img src="assets/images/hangman.png"></center>
+            <center>
+                <img src="assets/images/hangman.png">
+            </center>
         </header>
 
         <main>
@@ -80,20 +84,21 @@
             <p id="preptext">You guessed:</p>
             <p id="winnertitle">No one yet...let's go, yo!</p>
 
-
+            <!--left div, where the picture and artist bio will go -->
             <div class="left-side">
 
-                
-                
                 <div id="artist-image"></div>
 
             </div>
 
+            <!--right div, where the guessing takes place -->
             <div class="right-side">
 
                 <h3 id="instructions">Press any letter to get started!</h3>
 
-                <div class="hint">HINT: <span id="hint"></span></div>
+                <div class="hint">HINT:
+                    <span id="hint"></span>
+                </div>
 
                 <br>
 
@@ -121,10 +126,7 @@
                 </div>
 
 
-                
-
                 <br>
-
 
 
                 <div>
@@ -139,9 +141,6 @@
                 <br>
 
 
-
-
-
                 <div>
                     <strong>Letters Already Guessed:</strong>
                 </div>
@@ -150,14 +149,17 @@
 
                 <div id="alreadyguessed">
                 </div>
-                
+
                 <br id="break">
 
-                <center><button id="reset" onclick="reset()">New Word</button></center>
+                <!--button to press to get a new word -->
+                <center>
+                    <button id="reset" onclick="reset()">New Word</button>
+                </center>
 
 
             </div>
-            
+
         </main>
 
 

@@ -8,6 +8,23 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+#allcontent {
+    background-image: url('../images/bg.jpg');
+    border-style: solid;
+    border-width: 10px;
+    border-color: #ffffff;
+    border-radius: 20px;
+    width: 650px;
+    height:97vh;
+    padding: 0px 60px;
+    margin: 0 auto;
+    
+    -webkit-box-shadow: 6px 5px 42px 21px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 5px 42px 21px rgba(0,0,0,0.75);
+    box-shadow: 6px 5px 42px 21px rgba(0,0,0,0.75);
+}
+
+
 #preptext {
     margin: 0;
     text-align: center;
@@ -28,8 +45,40 @@ body {
     text-shadow: 2px 2px 9px #000000;
 }
 
-#title {
-    text-align: center;
+.left-side {
+    background-image: url('../images/paper.jpg');
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 20px;
+    height: 490px;
+    width: 300px;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+     box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+}
+
+.artistpic {
+    border-style: solid;
+    border-width: 6px;
+    border-radius: 10px;
+}
+
+.right-side {
+    background-image: url('../images/paper.jpg');
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 20px;
+    height: 490px;
+    width: 300px;
+    float: right;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
 }
 
 #instructions {
@@ -108,57 +157,11 @@ body {
     margin-top: 15px; 
 }
 
-#allcontent {
-    background-image: url('../images/bg.jpg');
-    border-style: solid;
-    border-width: 10px;
-    border-color: #ffffff;
-    border-radius: 20px;
-    width: 650px;
-    height:97vh;
-    padding: 0px 60px;
-    margin: 0 auto;
-    
-    -webkit-box-shadow: 6px 5px 42px 21px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 5px 42px 21px rgba(0,0,0,0.75);
-    box-shadow: 6px 5px 42px 21px rgba(0,0,0,0.75);
-}
 
-.artistpic {
-    border-style: solid;
-    border-width: 6px;
-    border-radius: 10px;
-}
 
-.left-side {
-    background-image: url('../images/paper.jpg');
-    border-style: solid;
-    border-width: 10px;
-    border-radius: 20px;
-    height: 490px;
-    width: 300px;
-    float: left;
-    padding: 20px;
-    box-sizing: border-box;
-    -webkit-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
-     box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
-}
 
-.right-side {
-    background-image: url('../images/paper.jpg');
-    border-style: solid;
-    border-width: 10px;
-    border-radius: 20px;
-    height: 490px;
-    width: 300px;
-    float: right;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    -webkit-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
-    box-shadow: 0px -1px 15px 4px rgba(0,0,0,0.75);
-}
+
+
 
 #reset {
 
