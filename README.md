@@ -1,4 +1,4 @@
-# Javascript Hangman Game
+# Javascript "Hip-Hop Hangman" Game
 
 
 ![Hip-Hop Hangman](assets/images/hangman_game.png)
