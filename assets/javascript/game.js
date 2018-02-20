@@ -4,7 +4,7 @@
 var artists = ["tupac", "outkast", "redman", "eminem", "wu-tang", "krs-one", "rakim", "mobbdeep", "publicenemy", "dmx"];
 
 //choosing an artist at random from the array
-var currentArtist = artists[Math.floor(Math.random() * artists.length)]; 
+var currentArtist = artists[Math.floor(Math.random() * artists.length)];  
 
 //global variables
 var wins = 0;
