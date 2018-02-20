@@ -1,9 +1,9 @@
 # Javascript Hangman Game
 
 
-![GitHub Logo](assets/images/hangman_game_portfolio.png)
+![Hip-Hop Hangman](assets/images/hangman_game.png)
 
-(https://bereznd1.github.io/Hangman-Game/)
+(Hip-Hop Hangman - *View Live* https://bereznd1.github.io/Hangman-Game/)
 
 
 ## Brief Description
