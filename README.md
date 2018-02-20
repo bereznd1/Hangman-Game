@@ -3,7 +3,7 @@
 
 ![Hip-Hop Hangman](assets/images/hangman_game.png)
 
-[Hip-Hop Hangman - *View Live*] https://bereznd1.github.io/Hangman-Game/)
+ (https://bereznd1.github.io/Hangman-Game/ "*View Live*")
 
 
 ## Brief Description
