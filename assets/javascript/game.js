@@ -146,11 +146,13 @@ function pauseDMX() {
 
 //activates when New Word button is clicked & picks a new word plus resets guesses remaining & letters already guessed
 function reset() {
-
+    
     var getHint = document.getElementById("hint");
 
     // a new artist is picked
     currentArtist = artists[Math.floor(Math.random() * artists.length)];
+
+    answerArray = [];
 
     for (var i = 0; i < currentArtist.length; i++) {
 
@@ -333,6 +335,7 @@ function startUp() {
 
 
         //if all blanks have been filled in, a win is added
+        
         var answerArrayString = answerArray.toString();
         if (answerArrayString.indexOf("_") === -1) {
 
@@ -529,9 +532,10 @@ function startUp() {
 
 
             //after the win is made, a new artist is picked & the "current word" div is filled with the right number of underscores based on how many letters are in that artist's name
+            
             currentArtist = artists[Math.floor(Math.random() * artists.length)];
 
-
+            answerArray = [];
 
             for (var i = 0; i < currentArtist.length; i++) {
 
@@ -615,6 +619,8 @@ function startUp() {
 
             //after the loss, a new artist is picked
             currentArtist = artists[Math.floor(Math.random() * artists.length)];
+
+            answerArray = [];
 
             for (var i = 0; i < currentArtist.length; i++) {
 
