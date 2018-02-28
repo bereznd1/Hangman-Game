@@ -1,5 +1,3 @@
-//ALL WORKING BUT 1 MAIN ISSUE: for some reason if the next word is shorter than the previous word, the extra letters from the previous word carry over. Don't understand why, since the "innerhtml" is supposed to replace the current word div's entire contents with the new word. 
-
 //array of possible artists
 var artists = ["tupac", "outkast", "redman", "eminem", "wu-tang", "krs-one", "rakim", "mobbdeep", "publicenemy", "dmx"];
 
