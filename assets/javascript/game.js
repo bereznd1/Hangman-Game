@@ -171,11 +171,11 @@ function reset() {
     }
 
     if (currentArtist === "redman") {
-        getHint.innerHTML = "Newark's favorite weed-smoker...";
+        getHint.innerHTML = "Newark's own Funk Doctor Spock...";
     }
 
     if (currentArtist === "eminem") {
-        getHint.innerHTML = "Do you like violence?";
+        getHint.innerHTML = "Mom's spaghetti...";
     }
 
     if (currentArtist === "wu-tang") {
@@ -191,7 +191,7 @@ function reset() {
     }
 
     if (currentArtist === "mobbdeep") {
-        getHint.innerHTML = "Official Queensbridge murderers...";
+        getHint.innerHTML = "Ain't no such things as Halfway Crooks...";
     }
 
     if (currentArtist === "publicenemy") {
@@ -244,11 +244,11 @@ function startUp() {
     }
 
     if (currentArtist === "redman") {
-        getHint.innerHTML = "Newark's favorite weed-smoker...";
+        getHint.innerHTML = "Newark's own Funk Doctor Spock...";
     }
 
     if (currentArtist === "eminem") {
-        getHint.innerHTML = "Do you like violence?";
+        getHint.innerHTML = "Mom's spaghetti...";
     }
 
     if (currentArtist === "wu-tang") {
@@ -264,7 +264,7 @@ function startUp() {
     }
 
     if (currentArtist === "mobbdeep") {
-        getHint.innerHTML = "Official Queensbridge murderers...";
+        getHint.innerHTML = "Ain't no such things as Halfway Crooks...";
     }
 
     if (currentArtist === "publicenemy") {
@@ -342,7 +342,7 @@ function startUp() {
             if (currentArtist === "tupac") {
 
                 getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/pac.jpg' height='50%'></center><p>Highly controversial gangsta rapper who was universally accepted as an extraordinary & influential talent after being killed in 1996. <strong>2Pac</strong> became the unlikely martyr of gangsta rap, & a tragic symbol of the toll its lifestyle exacted on urban black America.</p>";
-                getWinnerTitle.innerHTML = "'<strong>Ambitionz Az A Ridah</strong>' - 2Pac";
+                getWinnerTitle.innerHTML = "'<strong>Dear Mama</strong>' - 2Pac";
                 pauseOutkast();
                 pauseRedman();
                 pauseEminem();
@@ -359,7 +359,7 @@ function startUp() {
             if (currentArtist === "outkast") {
 
                 getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/outkast.jpg'></center><p>Atlanta duo whose blend of gritty Southern soul, fluid raps, & low-slung funk epitomized hip-hop's rising force, the Dirty South, during the '90s.</p>";
-                getWinnerTitle.innerHTML = "'<strong>So Fresh So Clean</strong>' - Outkast";
+                getWinnerTitle.innerHTML = "'<strong>Ms. Jackson</strong>' - Outkast";
                 pauseTupac();
                 pauseRedman();
                 pauseEminem();
@@ -377,7 +377,7 @@ function startUp() {
             if (currentArtist === "redman") {
 
                 getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/redman.jpg'></center><p>Never quite a superstar, <strong>Redman</strong> was nonetheless one of the most off-the-wall, beloved, and enduring rappers of the '90s and 2000s. He is known for his fluid vocal style that was sometimes satirical, sometimes silly, and always tough.</p>";
-                getWinnerTitle.innerHTML = "'<strong>Pick It Up</strong>' - Redman";
+                getWinnerTitle.innerHTML = "'<strong>Can't Wait</strong>' - Redman";
                 pauseTupac();
                 pauseOutkast();
                 pauseEminem();
@@ -395,7 +395,7 @@ function startUp() {
             if (currentArtist === "eminem") {
 
                 getArtistImage.innerHTML = "<center><img class = 'artistpic' src='assets/images/eminem.jpg'></center><p>The best-selling white rapper of all time, alternately comic & confrontational, both hugely talented & highly controversial. On sheer verbal skills, <strong>Eminem</strong> was one of the greatest MCs of his generation -- rapid, fluid, dexterous, & unpredictable.</p>";
-                getWinnerTitle.innerHTML = "'<strong>My Fault</strong>' - Eminem";
+                getWinnerTitle.innerHTML = "'<strong>Lose Yourself</strong>' - Eminem";
                 pauseTupac();
                 pauseRedman();
                 pauseOutkast();
@@ -554,11 +554,11 @@ function startUp() {
             }
 
             if (currentArtist === "redman") {
-                getHint.innerHTML = "Newark's favorite weed-smoker...";
+                getHint.innerHTML = "Newark's own Funk Doctor Spock...";
             }
 
             if (currentArtist === "eminem") {
-                getHint.innerHTML = "Do you like violence?";
+                getHint.innerHTML = "Mom's spaghetti...";
             }
 
             if (currentArtist === "wu-tang") {
@@ -574,7 +574,7 @@ function startUp() {
             }
 
             if (currentArtist === "mobbdeep") {
-                getHint.innerHTML = "Official Queensbridge murderers...";
+                getHint.innerHTML = "Ain't no such things as Halfway Crooks...";
             }
 
             if (currentArtist === "publicenemy") {
@@ -639,11 +639,11 @@ function startUp() {
             }
 
             if (currentArtist === "redman") {
-                getHint.innerHTML = "Newark's favorite weed-smoker...";
+                getHint.innerHTML = "Newark's own Funk Doctor Spock...";
             }
 
             if (currentArtist === "eminem") {
-                getHint.innerHTML = "Do you like violence?";
+                getHint.innerHTML = "Mom's spaghetti...";
             }
 
             if (currentArtist === "wu-tang") {
@@ -659,7 +659,7 @@ function startUp() {
             }
 
             if (currentArtist === "mobbdeep") {
-                getHint.innerHTML = "Official Queensbridge murderers...";
+                getHint.innerHTML = "Ain't no such things as Halfway Crooks...";
             }
 
             if (currentArtist === "publicenemy") {
